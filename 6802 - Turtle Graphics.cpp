@@ -15,7 +15,7 @@ int main()
         int arr[64][64] = {0};
         
         int dir = 1;
-        
+        arr[x][y] = 1;
         int count = 0;
         for(int j=0; j<str.length(); j++)
         {
@@ -35,12 +35,12 @@ int main()
                 else if(dir == 2) x++;
                 else if(dir == 3) y--;
                 else if(dir == 4) x--;
-                if(arr[x][y] == 0) arr[x][y] = 1;
-                else count++;
+                
+                if(arr[x][y] == 1) count++;
+                arr[x][y]++;
             }
         }
         cout << "Case #"<< i << ": "<< x << " " << y << " " << count << endl;
     }
-   
    return 0;
 }
